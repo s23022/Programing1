@@ -1,2 +1,3 @@
-result = divmod(20, 3)[0] ** divmod(20, 3)[1]
+result = pow(20 // 3, 20 % 3)
 print(result)
+
