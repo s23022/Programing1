@@ -1,0 +1,18 @@
+def square(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError("引数は整数または小数である必要があります")
+    return x ** 2
+
+# テスト
+try:
+    result = square(5)
+    print(result)  # 25
+except TypeError as e:
+    print("エラー:", e)
+
+try:
+    result = square('invalid')
+    print(result)
+except TypeError as e:
+    print("エラー:", e)
+

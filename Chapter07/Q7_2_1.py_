@@ -1,0 +1,21 @@
+def list_del_nth(my_list, index):
+    try:
+        del my_list[index]
+        print("Successfully")
+    except IndexError:
+        print("index Not Found")
+    except Exception as e:
+        print("Unexpected Error:", e)
+
+# リストのテスト
+my_list = [1, 2, 3, 4, 5]
+
+# インデックスが存在する場合
+list_del_nth(my_list, 2)  # インデックス2の要素（3）を削除し、"Successfully" を出力
+
+# インデックスが存在しない場合
+list_del_nth(my_list, 10) # "index Not Found" を出力
+
+# 予期せぬエラーが発生する場合
+list_del_nth(my_list, 'invalid') # "Unexpected Error" を出力
+
